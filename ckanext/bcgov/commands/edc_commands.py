@@ -29,11 +29,11 @@ class EdcCommand(CkanCommand):
     '''
     summary = __doc__.split('\n')[0]
     usage = __doc__
-    
+
     default_data_dir = os.path.dirname(os.path.abspath(__file__))
-    default_vocab_file = default_data_dir + '/../../../data/edc-vocabs.json'  
-    default_org_file =   default_data_dir + '/../../../data/orgs.json'
-    
+    default_vocab_file = default_data_dir + '/../scripts/data/edc-vocabs.json'
+    default_org_file =   default_data_dir + '/../scripts/data/orgs.json'
+
     def command(self):
         '''
         Parse command line arguments and call appropriate method.
