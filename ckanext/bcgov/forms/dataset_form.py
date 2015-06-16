@@ -104,7 +104,6 @@ class EDC_DatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
     #Customize schema for EDC Application Dataset
     def _modify_package_schema(self, schema):
         schema.update({
-                        'tag_string' : [not_empty],
                         'title' : [not_empty, check_dashes, check_duplicates, unicode],
                         'notes' : [not_empty, unicode],
                         'org' : [not_empty, convert_to_extras],

@@ -122,7 +122,7 @@ class EDC_GeoSpatialForm(edc_form.EDC_DatasetForm):
                         'table_comment' : [ignore_missing, convert_to_extras],
                         'details' : details_schema(),
                         #'iso_topic_cat' : [toolkit.get_validator('not_empty'), cnvrt_to_tags('iso_topic_category')],
-                        'iso_topic_string' : [not_empty, convert_iso_topic, convert_to_extras],
+                        'iso_topic_string' : [ignore_missing, convert_iso_topic, convert_to_extras],
                         'dates' : dates_to_db_schema()
                       })
         schema['resources'].update({
@@ -222,7 +222,7 @@ class EDC_NonGeoSpatialForm(edc_form.EDC_DatasetForm):
                         'south_bound_latitude' : [ignore_missing, convert_to_extras],
                         'north_bound_latitude' : [ignore_missing, convert_to_extras],
                         #'iso_topic_cat' : [not_empty, cnvrt_to_tags('iso_topic_category')],
-                        'iso_topic_string' : [not_empty, convert_iso_topic, convert_to_extras],
+                        'iso_topic_string' : [ignore_missing, convert_iso_topic, convert_to_extras],
                         'dates' : dates_to_db_schema()
                      })
          
